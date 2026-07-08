@@ -8,30 +8,34 @@
 
 run:
 ``` 
-https://github.com/<personal_account>/git_mccan.git
+git clone https://github.com/amirstein/git_mccan.git
 cd git_mccan
 ```
 
-## 1. Check dbt
+### Initial validation:
+#### We want to see if dbt already exists (installed) in the computer
+dbt:
 
 ```powershell
 dbt --version
 where.exe dbt
 ```
-
-## 2. Check Python
+python:
 
 ```powershell
 python --version
 where.exe python
 ```
 
-## 3. Create a virtual environment
+## Create a virtual environment
 
 ```powershell
 py -m venv venv
 .\venv\Scripts\activate
 ```
+### Validation:
+- Powershell display: green brackets, left side of terminal path (i.e (venv)c:/users/user)
+- Bash display: white brackets, above path (i.e (venv))
 
 **If you have any issues:** 
 
@@ -49,18 +53,24 @@ $env:VIRTUAL_ENV = "C:\Users\User\Documents\<folder_name>\git_mccan\venv"
 $env:PATH = "$env:VIRTUAL_ENV\Scripts;" + $env:PATH
 ```
 
-**Check:**
+**Validation:**
 
 ```powershell
 where.exe python
 ```
 
-## 4. Install dbt-snowflake
+## Install dbt-snowflake
 
 Release page: https://github.com/dbt-labs/dbt-snowflake/releases
 
+For specific version:
+
 ```powershell
-pip install dbt-snowflake(==1.7.4)
+pip install dbt-snowflake==1.7.4
+```
+For most updated version:
+```powershell
+pip install dbt-snowflake
 ```
 
 If the venv causes issues, run on bash:
@@ -68,7 +78,7 @@ If the venv causes issues, run on bash:
 > .\.venv\Scripts\python.exe -m pip install dbt-snowflake==1.7.4
 > ```
 
-**Check** :
+**Validation** :
 
 ```powershell
 ->-> site-packages getting full
@@ -76,7 +86,7 @@ where.exe dbt
 where.exe python
 ```
 
-## 5. GitHub setup
+## GitHub setup
 
 1. Create a new repository on your personal GitHub account.
 2. C -> Users -> User -> documents -> open new folder, name: mccann_personal_repo
@@ -89,7 +99,8 @@ where.exe python
    git status
    ```
 
-## 6. Initialize a dbt project
+## Initialize a dbt project
+**FYI- There may be issues with local user details and Github account**
 
 In Git Bash :
 
@@ -105,7 +116,7 @@ Somwtimes there is a conflict between python version and dbt packages
 
 **Check:** confirm the push on GitHub.
 
-## 7. Branch, change, and PR
+## Branch, change, and PR
 
 Still in Git Bash:
 
@@ -129,7 +140,7 @@ Then on GitHub:
 where.exe dbt
 ```
 
-## 8. Run dbt
+## Run dbt
 
 ```powershell
 cd <dbt_project>
@@ -137,5 +148,8 @@ dbt debug
 ```
 
 ## 9. If you have time
-
-*(TBD)*
+1. Ask soneone to clone your repo
+2. Let the other employee change something in one of the docs
+3. he will push the change
+4. You also make a change and push it without pull
+5. THe purpose is to deal with conflict and solve it
