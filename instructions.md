@@ -8,7 +8,7 @@
 
 run:
 ``` 
-https://github.com/<personal_account>/git_mccan.git
+git clone https://github.com/amirstein/git_mccan.git
 cd git_mccan
 ```
 
