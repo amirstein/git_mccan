@@ -1,0 +1,65 @@
+
+
+1. 
+dbt --version
+where.exe dbt 
+
+2.
+python --version
+where.exe python
+
+3.
+virtual env
+py -m venv venv
+.\venv\Scripts\activate
+
+check
+where.exe python
+
+4.
+https://github.com/dbt-labs/dbt-snowflake/releases
+pip install dbt-snowflake (==1.7.4)
+
+check
+site packages getting full
+where.exe dbt
+where.exe python
+
+5. 
+github
+new repository
+git clone
+cd <repository_name>
+git status
+
+6.
+git bash
+dbt init new_project 
+git add new_project
+git commit -m "initial commit"
+git push
+
+check 
+github
+
+7.
+still in git bash
+git switch -c new_branch
+<make a change to the file>
+git status
+git add 
+git commit -m
+git push
+github
+new pr
+merge pr
+
+check
+powershell
+where.exe dbt
+
+8. 
+cd dbt project
+dbt debug
+
+9. If you hav time 
